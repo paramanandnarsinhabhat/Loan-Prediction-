@@ -80,7 +80,8 @@ data.head()
 print(data.head())
 
 
-
+# saving the pre-processed data
+data.to_csv('/Users/paramanandbhat/Downloads/Loan Prediction pre-processing 2/loan_prediction_data.csv', index=False)
 
 
 
