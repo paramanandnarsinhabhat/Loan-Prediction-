@@ -67,6 +67,19 @@ data['Loan_Status'] = data['Loan_Status'].map({'N': 0, 'Y': 1})
 print(data.head())
 
 #Step 5 :Bringing all the variables in range 0 to 1
+data['Dependents']=(data['Dependents']-data['Dependents'].min())/(data['Dependents'].max()-data['Dependents'].min())
+
+# applying for loop to bring all the variables in range 0 to 1
+
+for i in data.columns[1:]:
+    data[i] = (data[i] - data[i].min()) / (data[i].max() - data[i].min())
+
+# again looking at first five rows of pre-processed data
+data.head()
+
+print(data.head())
+
+
 
 
 
