@@ -1,6 +1,4 @@
-Based on the provided code snippets, requirements, and file structure, here is a `README.md` file for the loan prediction neural network model:
 
----
 
 # Loan Prediction Neural Network
 
