@@ -7,6 +7,9 @@ import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow import keras
+
 
 # check version on sklearn
 print('Version of sklearn:', sklearn.__version__)
@@ -48,5 +51,32 @@ X.shape, y.shape
 
 print('Independent variables' , X.shape)
 print('Dependent variables' , y.shape)
+
+#Create training andvalidation set
+# stratify will make sure that the distribution of classes in train and validation set it similar
+# random state to regenerate the same train and validation set
+# test size 0.2 will keep 20% data in validation and remaining 80% in train set
+
+X_train,X_test,y_train,y_test = train_test_split(X,y,stratify=data['Loan_Status'],random_state=10,test_size=0.2)
+
+# shape of training and validation set
+(X_train.shape, y_train.shape), (X_test.shape, y_test.shape)
+
+#Training sets
+#Indpenedent vaiable
+print('X_train Shape',X_train.shape)
+#Dependent variable
+print('y_train Shape',y_train.shape)
+
+#Validation Sets
+#Dependent variable
+print('X_test shape',X_test.shape)
+print('y_test shape',y_test.shape)
+
+#Defining the arhitecture of the model
+# checking the version of keras
+
+print(keras.__version__)
+
 
 
